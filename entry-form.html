@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Entry Form - CityCare Hospital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🏥 CityCare Hospital</div>
+    <nav>
+      <a href="index.html">Facilities & Services</a>
+      <a href="entry-form.html" class="active">Patient Entry Form</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="form-wrapper">
+      <h2>Patient Admission Entry Form</h2>
+      <p class="subtitle">Please enter the required information for rapid intake.</p>
+
+      <form id="hospitalEntryForm" action="success.html" method="GET">
+        
+        <!-- Primary Patient Information -->
+        <fieldset>
+          <legend>1. Primary Details</legend>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender *</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bloodGroup">Blood Group</label>
+              <select id="bloodGroup" name="bloodGroup">
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Demographic & Identity Information -->
+        <fieldset>
+          <legend>2. Demographic & Background</legend>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nationality">Nationality *</label>
+              <input type="text" id="nationality" name="nationality" placeholder="e.g. Indian, American" required>
+            </div>
+
+            <div class="form-group">
+              <label for="religion">Religion</label>
+              <input type="text" id="religion" name="religion" placeholder="e.g. Hindu, Christian, Muslim, etc.">
+            </div>
+
+            <div class="form-group">
+              <label for="nationalId">Government ID / Passport No.</label>
+              <input type="text" id="nationalId" name="nationalId" placeholder="ID Number">
+            </div>
+
+            <div class="form-group">
+              <label for="maritalStatus">Marital Status</label>
+              <select id="maritalStatus" name="maritalStatus">
+                <option value="">Select Status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Contact & Emergency Info -->
+        <fieldset>
+          <legend>3. Contact & Emergency Details</legend>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="patient@example.com">
+            </div>
+
+            <div class="form-group full-width">
+              <label for="address">Residential Address *</label>
+              <textarea id="address" name="address" rows="2" placeholder="Street address, City, State, ZIP" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="guardianName">Emergency Contact Person *</label>
+              <input type="text" id="guardianName" name="guardianName" placeholder="Contact Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="guardianPhone">Emergency Contact Phone *</label>
+              <input type="tel" id="guardianPhone" name="guardianPhone" placeholder="+1 234 567 8900" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Admission Details -->
+        <fieldset>
+          <legend>4. Department & Admission Category</legend>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="department">Department Needed *</label>
+              <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="emergency">Emergency / Casualty</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="general">General Medicine</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="admissionType">Admission Type *</label>
+              <select id="admissionType" name="admissionType" required>
+                <option value="outpatient">Outpatient (OPD)</option>
+                <option value="inpatient">Inpatient (IPD)</option>
+                <option value="emergency">Emergency</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="reset" class="btn-secondary">Clear Form</button>
+          <button type="submit" class="btn-primary">Submit Entry →</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="form-script.js"></script>
+</body>
+</html>
